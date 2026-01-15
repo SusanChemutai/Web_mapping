@@ -1,0 +1,102 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* Center overlay horizontally, slightly below top */
+.map-overlay {
+    position: absolute;
+    top: 5px; /* move down from top */
+    left: 50%; /* center horizontally */
+    transform: translateX(-50%); /* truly center */
+    z-index: 1000;
+    background: rgba(255,255,255,0.9);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    text-align: center; /* center text and inputs */
+}
+
+.map-overlay h2 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0078d7;
+}
+
+.map-overlay input[type="text"] {
+    padding: 6px 10px;
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.map-overlay button {
+    padding: 6px 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0078d7;
+    color: #fff;
+    cursor: pointer;
+}
+
+.map-overlay button:hover {
+    background-color: #005a9e;
+}
+
+.leaflet-popup-content-wrapper {
+    background: rgba(255,255,255,0.95);
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 8px 12px;
+    color: #333;
+}
+
+.leaflet-popup-content strong {
+    color: #0078d7;
+}
+
+.leaflet-marker-icon {
+    filter: drop-shadow(0 0 2px #555);
+}
+
+.highlighted-parcel {
+    color: blue !important;
+    weight: 3 !important;
+    fillOpacity: 0.3 !important;
+}
+
+/* Legend styling */
+.legend {
+    position: absolute;
+    bottom: 30px; /* distance from bottom */
+    left: 10px;   /* distance from left */
+    background: rgba(255,255,255,0.9);
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    line-height: 1.5;
+}
+
+.legend .legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.legend .legend-color {
+    width: 20px;
+    height: 14px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+}
